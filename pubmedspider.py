@@ -12,7 +12,7 @@ for index in range(0, len(list)):
     print [index]
     print listId
     for article in record['PubmedArticle']:
-     articleTitle = article['MedlineCitation']['Article']['ArticleTitle']
-     articleAbstract = article['MedlineCitation']['Article']['Abstract']
-     print articleTitle
-     print articleAbstract
+        articleTitle = article['MedlineCitation']['Article']['ArticleTitle']
+        articleAbstract = article['MedlineCitation']['Article']['Abstract']['AbstractText']
+        print articleTitle
+        print articleAbstract
