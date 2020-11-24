@@ -1,5 +1,5 @@
 from Bio import Entrez
-Entrez.email = "yfh1202@sinica.edu.tw"     # Always tell NCBI who you are
+Entrez.email = "abc@abc.com"     # Always tell NCBI who you are
 handle = Entrez.esearch(db="pubmed", term="PIK3CA")
 record = Entrez.read(handle)
 list = record["IdList"]
