@@ -1,6 +1,6 @@
 from Bio import Entrez
 Entrez.email = "abc@abc.com"     # Always tell NCBI who you are
-handle = Entrez.esearch(db="pubmed", term="PIK3CA")
+handle = Entrez.esearch(db="pubmed", term="(cell free DNA) OR cfDNA")
 record = Entrez.read(handle)
 list = record["IdList"]
 print len(list)
