@@ -1,4 +1,8 @@
 #!/usr/bin/perl -w
+#Yu-Feng Huang
+#yfh1202@sinica.edu.tw
+#yfhuang@csie.ntu.edu.tw
+
 use strict;
 use Bio::DB::EUtilities;
 use XML::LibXML;
@@ -21,8 +25,9 @@ my @ids = $factory->get_ids;
 
 for(my $i = 0; $i < $#ids; $i++){
     my $factory = Bio::DB::EUtilities->new(-eutil => 'efetch',
-                                           -email => 'abc@abc.com
+                                           -email => 'abc@abc.com',
                                            -db    => 'pubmed',
+                                           -term  => '(cell free DNA) OR cfDNA',
                                            -retmode => 'xml',
                                            -id => $ids[$i]);
 
